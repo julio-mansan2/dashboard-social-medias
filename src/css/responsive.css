@@ -1,0 +1,35 @@
+@media (min-width: 900px) and (max-width: 1200px) {
+    .header p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        width: 100%;
+    }
+
+    hr {
+        display: block;
+        width: 100%;
+    }
+
+    .header-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.8rem;
+    }
+
+    .toggle {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .main section {
+        grid-template-columns: 1fr;
+    }
+}

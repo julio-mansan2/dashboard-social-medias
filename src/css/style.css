@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main';
+}
+
+hr {
+    display: none;
+}
+
+.dark-span {
+    color: var(--desatured-blue);
+}
+
+.light-span {
+    color: var(--dark-grayish-blue);
+}
+
+.dark-mode {
+    color: var(--white);
+}
+
+.light-mode {
+    color: var(--very-dark-blue-bg);
+}
+
+.facebook {
+    border-top: 5px solid var(--facebook);
+}
+
+.twitter {
+    border-top: 5px solid var(--twitter);
+}
+
+.instagram {
+    border-top: 5px solid;
+    border-image: linear-gradient(90deg, hsl(37, 97%, 70%) , hsl(329, 70%, 58%)) 1;
+}
+
+.youtube {
+    border-top: 5px solid var(--youtube);
+}
+
+.bg-header-dark-theme {
+    background-color: var(--very-dark-blue-top);
+}
+
+.bg-main-dark-theme {
+    background-color: var(--very-dark-blue-bg);
+}
+
+.bg-header-light-theme {
+    background-color: var(--very-pale-blue);
+}
+
+.bg-main-light-theme {
+    background-color: var(--white);
+}
+
+.header {
+    padding: 3% 7%;
+    grid-area: header;
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    margin-bottom: 3.1rem;
+}
+
+.header-info h1 {
+    margin-bottom: 0.3rem;
+}
+
+.header-info span {
+    font-weight: 700;
+}
+
+.header-info div:first-child span {
+    color: var(--dark-grayish-blue);
+}
+
+.toggle {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 4.5rem;
+    height: 2rem;
+    background-image: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    display: block;
+    border-radius: 6.25rem;
+    position: relative;
+    margin-right: 0.6rem;
+    transition: 0.3s;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 0.25rem;
+    left: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--very-dark-blue-top);
+    border-radius: 5.6rem;
+    transition: 0.3s;
+}
+
+label:hover {
+    opacity: 0.7;
+}
+
+input:checked+label {
+    background-image: linear-gradient(90deg, var(--toggle), var(--toggle));
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    background-color: var(--white);
+}
+
+.main-dashboard {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2.5rem;
+}
+
+.main-social {
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.main-social div:first-child {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.main-social div:first-child span {
+    font-weight: 700;
+}
+
+.main-social h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+}
+
+.main-dashboard p {
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 1.25rem;
+}
+
+.main-social div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.up {
+    color: var(--lime-green);
+}
+
+.down {
+    color: var(--bright-red);
+}
+
+.main-social:hover {
+    filter: brightness(130%);
+    cursor: pointer;
+}
+
+main {
+    grid-area: main;
+    padding: 5% 7%;
+}
+
+.article-bg-dark {
+    background-color: var(--dark-desatured-blue);
+}
+
+.article-bg-light {
+    background-color: var(--light-grayish-blue);
+}
+
+.main h2 {
+    margin-bottom: 1.25rem;
+}
+
+.main section {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2.5rem;
+}
+
+.specific-information {
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem;
+    border-radius: 5px;
+    transition: 0.3s;
+    gap: 1.25rem;
+}
+
+.specific-information p {
+    font-weight: 700;
+}
+
+.specific-information > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.percentage {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.specific-information:hover {
+    cursor: pointer;
+    filter: brightness(130%);
+}
